@@ -1,0 +1,26 @@
+<p> product-detail works! </p>
+<table class="table" *ngFor="let product of products">
+  <tr>
+    <th class="active text-right" width="120">ID</th>
+    <td>{{ product.id }}</td>
+  </tr>
+  <tr>
+    <th class="active text-right" width="120">Name</th>
+    <td>{{ product.name }}</td>
+  </tr>
+  <tr>
+    <th class="active text-right" width="120">Detail</th>
+    <td>{{ product.detail }}</td>
+  </tr>
+  <tr>
+    <th class="active text-right" width="120">Price</th>
+    <td>{{ product.price }}</td>
+  </tr>
+  <tr>
+    <th class="active text-right" width="120">Quantity</th>
+    <td>{{ product.quantity }}</td>
+  </tr>
+</table>
+<button class="btn" type="button" routerLink="/products">Back 1</button>
+<button class="btn btn-info" type="button" (click)="gotoProducts()">Back 2</button>
+<button class="btn btn-warning" type="button" (click)="gotoProducts2()">Back 3</button>
