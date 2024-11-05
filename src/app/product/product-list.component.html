@@ -1,0 +1,23 @@
+<p> product-list works! </p>
+<table class="table">
+  <thead>
+    <tr class="active">
+      <th>#</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th>View</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products; let i=index;" [class.warning]="highlightId == product.id" >
+      <td>{{ i+1 }}</td>
+      <td>{{ product.name }}</td>
+      <td>{{ product.price }}</td>
+      <td>
+      <button type="button" routerLink="/product/{{ product.id }}"  class="btn btn-sm btn-success">
+      View
+      </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
