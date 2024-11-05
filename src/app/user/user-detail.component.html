@@ -1,0 +1,26 @@
+<p> user-detail works! </p>
+<table class="table" *ngFor="let user of users">
+  <tr>
+    <th class="active text-right" width="120">ID</th>
+    <td>{{ user.id }}</td>
+  </tr>
+  <tr>
+    <th class="active text-right" width="120">Firstname</th>
+    <td>{{ user.firstname }}</td>
+  </tr>
+  <tr>
+    <th class="active text-right" width="120">Lastname</th>
+    <td>{{ user.lastname }}</td>
+  </tr>
+  <tr>
+    <th class="active text-right" width="120">Gender</th>
+    <td>{{ user.gender }}</td>
+  </tr>
+  <tr>
+    <th class="active text-right" width="120">Age</th>
+    <td>{{ user.age }}</td>
+  </tr>
+</table>
+<button class="btn" type="button" routerLink="/users">Back 1</button>
+<button class="btn btn-info" type="button" (click)="gotoUsers()">Back 2</button>
+<button class="btn btn-warning" type="button" (click)="gotoUsers2()">Back 3</button>

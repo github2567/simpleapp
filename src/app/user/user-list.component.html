@@ -1,0 +1,22 @@
+<p> user-list works! </p>
+<table class="table">
+  <thead>
+    <tr class="active">
+      <th>#</th>
+      <th>Firstname</th>
+      <th>Lastname</th>
+      <th>View</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users; let i=index;" [class.warning]="highlightId == user.id" >
+      <td>{{ i+1 }}</td>
+      <td>{{ user.firstname }}</td>
+      <td>{{ user.lastname }}</td>
+      <td>
+      <button type="button" routerLink="/users/{{ user.id }}"  class="btn btn-sm btn-success">
+       View </button>
+       </td>
+    </tr>
+  </tbody>
+</table>
